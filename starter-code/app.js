@@ -10,8 +10,11 @@ const logger       = require('morgan');
 const path         = require('path');
 
 
+//${process.env.DB}
 mongoose
-  .connect('mongodb://localhost/starter-code', {useNewUrlParser: true})
+  .connect(`mongodb://localhost/DE-celebrities-movies`, {
+    useNewUrlParser: true
+  })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -51,8 +54,8 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 
-const index = require('./routes/index');
+const index = require('./routes/index.route');
 app.use('/', index);
-
+app.use('/celebrities', require('./routes/celebrities.route'))
 
 module.exports = app;
