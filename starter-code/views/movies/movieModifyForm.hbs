@@ -1,0 +1,17 @@
+<h2>Edita los datos de {{title}}</h2>
+<hr>
+<form action="/movies/{{id}}/edit" method="POST">
+  <div class="form-group">
+    <label for="">Title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{title}}">
+  </div>
+  <div class="form-group">
+    <label for="">Genre</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="genre" value="{{genre}}">
+  </div>
+  <div class="form-group">
+    <label for="">Plot</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="plot" value="{{plot}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -62,10 +62,10 @@ router.get('/:id/edit', (req, res) => {
     .catch(err => console.log(err))
 }) 
 
-router.post('/:id', (req, res) => {
+router.post('/:id/edit', (req, res) => {
 
   const { name, occupation, catchPhrase } = req.body
-  Celebrity.findByIdAndUpdate({ name, occupation, catchPhrase })
+  Celebrity.findByIdAndUpdate(req.params.id, { name, occupation, catchPhrase })
     .then(() => res.redirect('/celebrities/index'))
     .catch(err=>console.log(err))
 })

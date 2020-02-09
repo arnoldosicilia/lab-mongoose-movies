@@ -1,0 +1,9 @@
+<div class="movies-list">
+  <h2>Listado de Movies</h2>
+  <hr>
+  {{#each movies}}
+
+  <a href="/movies/{{id}}">{{title}}</a> - <a href="/movies/{{id}}/delete">Borrar</a> - <a href="/movies/{{id}}/edit">Edit</a><br>
+
+  {{/each}}
+</div>

@@ -1,20 +1,18 @@
 <h2>Edita los datos de {{name}}</h2>
 <hr>
-<form action="/celebrities/new" method="POST">
+<form action="/celebrities/{{id}}/edit" method="POST">
   <div class="form-group">
     <label for="">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="name" value={{name}}
+    <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="{{name}}"
     placeholder="Enter Celebrity´s Name">
   </div>
   <div class="form-group">
     <label for="">Occupation</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="occupation" value={{occupation}}
-      placeholder="Enter Celebrity´s Occupation">
+    <input type="text" class="form-control" id="exampleInputEmail1" name="occupation" value="{{occupation}}">
   </div>
   <div class="form-group">
     <label for="">Catch Phrase</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="catchPhrase" value={{catchPhrase}}
-      placeholder="Enter Celebrity´s Catch Phrase">
+    <input type="text" class="form-control" id="exampleInputEmail1" name="catchPhrase" value="{{catchPhrase}}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
